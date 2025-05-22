@@ -2,7 +2,9 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:rent_a_car/providers/authentication.dart';
+import 'package:rent_a_car/providers/vehicles.dart';
 import 'package:rent_a_car/routes.dart';
+import 'package:rent_a_car/utils/theme.dart';
 
 void main() async {
   HttpOverrides.global = MyHttpOverrides();
@@ -12,6 +14,7 @@ void main() async {
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => AuthenticationProvider()),
+        ChangeNotifierProvider(create: (context) => VehiclesProvider()),
       ],
       child: const MyApp(),
     ),
@@ -28,6 +31,7 @@ class MyApp extends StatelessWidget {
       title: 'Rent A Car',
       initialRoute: '/',
       routes: routes,
+      theme: theme,
     );
   }
 }

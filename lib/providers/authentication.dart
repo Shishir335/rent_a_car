@@ -26,6 +26,8 @@ class AuthenticationProvider with ChangeNotifier {
   TextEditingController email = TextEditingController();
   TextEditingController pass = TextEditingController();
 
+  LoginResponse? loginResponse;
+
   Future<HttpHelperResponse> login() async {
     changeLoader(true);
     print(EndPoints.login);
@@ -40,10 +42,9 @@ class AuthenticationProvider with ChangeNotifier {
     print(checkSuccess(res));
 
     if (checkSuccess(res)) {
-      LoginResponse? loginResponse;
       try {
         loginResponse = LoginResponse.fromJson(res.response[0]);
-        token = loginResponse.token!;
+        token = loginResponse!.token!;
         Prefs.setString('token', token!);
       } catch (e) {
         log(e.toString());
