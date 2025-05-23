@@ -1,6 +1,6 @@
 🚀 Features
 
-🔐 Login & Registration (with validation)
+🔐 Login & Registration (with validation) \n
 🚘 Browse and view available vehicles
 📍 View vehicle details and location on Google Maps
 👤 Profile
