@@ -1,15 +1,20 @@
 🚀 Features
 
-🔐 Login & Registration (with validation) \n
+🔐 Login & Registration (with validation)
+
 🚘 Browse and view available vehicles
+
 📍 View vehicle details and location on Google Maps
+
 👤 Profile
 
 🛠️ Tech Stack
-Technology	Description
-Flutter	Frontend cross-platform framework
-Dart	Programming language
-REST API	Mock Api
+
+Flutter:	Frontend cross-platform framework
+
+Dart:	Programming language
+
+REST API:	Mock Api
 
 📦 Packages Used
 
