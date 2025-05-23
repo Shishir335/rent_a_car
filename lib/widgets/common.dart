@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:rent_a_car/utils/colors.dart';
 import 'package:rent_a_car/utils/globals.dart';
 import 'package:another_flushbar/flushbar.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 gap({double? height, double? width}) {
   if (height == null && width == null) {
@@ -100,4 +101,16 @@ formatDate(DateTime? date, {String format = 'yyyy-MM-dd HH:mm'}) {
 
 statusBar(BuildContext context) {
   return Container(height: MediaQuery.of(context).viewPadding.top);
+}
+
+Future<void> openMap(double latitude, double longitude) async {
+  final url = Uri.parse(
+    'https://www.google.com/maps/search/?api=1&query=$latitude,$longitude',
+  );
+
+  if (await canLaunchUrl(url)) {
+    await launchUrl(url, mode: LaunchMode.externalApplication);
+  } else {
+    throw 'Could not launch $url';
+  }
 }

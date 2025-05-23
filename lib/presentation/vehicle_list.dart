@@ -1,7 +1,8 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:rent_a_car/models/vehicle.dart';
-import 'package:rent_a_car/providers/vehicles.dart';
+import 'package:rent_a_car/controllers/vehicles.dart';
 import 'package:rent_a_car/utils/navigator.dart';
 import 'package:rent_a_car/utils/theme.dart';
 import 'package:rent_a_car/widgets/loader.dart';
@@ -66,12 +67,22 @@ class VehicleCard extends StatelessWidget {
               borderRadius: BorderRadius.circular(10),
               child: Hero(
                 tag: vehicle.id!.toString(),
-                child: Image.network(
-                  vehicle.image!,
+                child: CachedNetworkImage(
+                  imageUrl: vehicle.image!,
+                  placeholder:
+                      (context, url) =>
+                          Icon(Icons.image_outlined, color: Colors.grey),
+                  errorWidget: (context, url, error) => Icon(Icons.error),
                   fit: BoxFit.cover,
                   height: 80,
                   width: 120,
                 ),
+                // Image.network(
+                //   vehicle.image!,
+                //   fit: BoxFit.cover,
+                //   height: 80,
+                //   width: 120,
+                // ),
               ),
             ),
             SizedBox(width: 10),

@@ -1,8 +1,8 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:rent_a_car/providers/authentication.dart';
-import 'package:rent_a_car/providers/vehicles.dart';
+import 'package:rent_a_car/controllers/authentication.dart';
+import 'package:rent_a_car/controllers/vehicles.dart';
 import 'package:rent_a_car/routes.dart';
 import 'package:rent_a_car/utils/globals.dart';
 import 'package:rent_a_car/utils/theme.dart';

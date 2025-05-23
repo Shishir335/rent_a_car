@@ -42,6 +42,8 @@ dependencies:
   flutter_spinkit:
   flutter_map: 
   latlong2: 
+  url_launcher:
+  cached_network_image: 
 
 dev_dependencies:
   flutter_test:
@@ -53,6 +55,17 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^5.0.0
+  flutter_launcher_icons: "^0.14.3"
+  # flutter_app_name: ^0.1.0
+
+# flutter_app_name:
+#   name: "Rent A Car"
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/logo.png"
+  min_sdk_android: 21 # android min sdk min:16, default 21
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

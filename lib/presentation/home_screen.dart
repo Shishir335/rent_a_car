@@ -3,8 +3,8 @@ import 'package:provider/provider.dart';
 import 'package:rent_a_car/presentation/profile.dart';
 import 'package:rent_a_car/presentation/rent_history.dart';
 import 'package:rent_a_car/presentation/vehicle_list.dart';
-import 'package:rent_a_car/providers/authentication.dart';
-import 'package:rent_a_car/providers/vehicles.dart';
+import 'package:rent_a_car/controllers/authentication.dart';
+import 'package:rent_a_car/controllers/vehicles.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);

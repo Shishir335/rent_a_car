@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:rent_a_car/providers/authentication.dart';
+import 'package:rent_a_car/controllers/authentication.dart';
 import 'package:rent_a_car/utils/navigator.dart';
 import 'package:rent_a_car/utils/prefs.dart';
 import 'package:rent_a_car/utils/theme.dart';

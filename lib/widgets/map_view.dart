@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:rent_a_car/utils/theme.dart';
+import 'package:rent_a_car/widgets/common.dart';
 
 class SmallMapView extends StatelessWidget {
   final double lat;
@@ -18,7 +19,34 @@ class SmallMapView extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('Location', style: theme.textTheme.titleLarge),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text('Location', style: theme.textTheme.titleLarge),
+              InkWell(
+                onTap: () {
+                  openMap(point.latitude, point.longitude);
+                },
+                child: Row(
+                  children: [
+                    Text(
+                      'To Map',
+                      style: theme.textTheme.labelMedium!.copyWith(
+                        decoration: TextDecoration.underline,
+                        decorationColor: theme.primaryColor,
+                      ),
+                    ),
+                    SizedBox(width: 5),
+                    Icon(
+                      Icons.arrow_forward_ios,
+                      size: 16,
+                      color: theme.primaryColor,
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
           SizedBox(height: 10),
           SizedBox(
             height: 200,
