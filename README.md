@@ -80,7 +80,7 @@ A. K. M. Mahbub Ullah
 
 📧 mahbubshishir973@gmail.com
 
-🔗 LinkedIn | Portfolio
+🔗 LinkedIn | https://www.linkedin.com/in/mahbub-ullah-2056471ba/
 
 
 
