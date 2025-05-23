@@ -1,3 +1,22 @@
+The app is ready to publish both Appstore and Playstore.
+
+Note: As I was instructed to use mockapi.io as backend, I could not able to create more that 2 apis. Because in free plan of mockapi.io they allow users to create only 2 endpoints. So I had to make only 2 apis.
+
+1. Login
+2. Vehicles List
+
+Both of them are get apis. As I could not create POST apis, I had to use get api to create the vibe of actual api calling. 
+
+As usual the vehicle list is a list of data. 
+
+I used these 2 api to create a vibe of actual app. 
+
+
+Here is the link of more details of the app, like demo video, build apk, key.properties file and upload-keystore.jks
+
+https://drive.google.com/drive/folders/1-mmhJznrFSnEddG53pO7ZMEGc_dZW2Mg?usp=sharing
+
+
 🚀 Features
 
 🔐 Login & Registration (with validation)
