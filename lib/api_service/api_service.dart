@@ -63,7 +63,6 @@ class HttpHelper {
 }
 
 checkSuccess(HttpHelperResponse res) {
-  print(res.response);
   if (res.statusCode! >= 200 && res.statusCode! < 300) {
     return true;
   } else {

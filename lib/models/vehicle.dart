@@ -49,19 +49,19 @@ class Vehicle {
 
 class Location {
   double? lat;
-  double? lng;
+  double? lang;
 
-  Location({this.lat, this.lng});
+  Location({this.lat, this.lang});
 
   Location.fromJson(Map<String, dynamic> json) {
     lat = json['lat'];
-    lng = json['lng'];
+    lang = json['lang'];
   }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
     data['lat'] = lat;
-    data['lng'] = lng;
+    data['lang'] = lang;
     return data;
   }
 }

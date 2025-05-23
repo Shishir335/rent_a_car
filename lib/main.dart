@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:rent_a_car/providers/authentication.dart';
 import 'package:rent_a_car/providers/vehicles.dart';
 import 'package:rent_a_car/routes.dart';
+import 'package:rent_a_car/utils/globals.dart';
 import 'package:rent_a_car/utils/theme.dart';
 
 void main() async {
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: routes,
       theme: theme,
+      navigatorKey: navigatorKey,
     );
   }
 }

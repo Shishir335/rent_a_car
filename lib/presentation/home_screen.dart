@@ -50,6 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Text(getAppBar(_selectedIndex))),
       body: _screens[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
@@ -66,5 +67,15 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
     );
+  }
+
+  String getAppBar(int index) {
+    if (index == 0) {
+      return 'Vehicles';
+    } else if (index == 1) {
+      return 'Rent History';
+    } else {
+      return 'Profile';
+    }
   }
 }

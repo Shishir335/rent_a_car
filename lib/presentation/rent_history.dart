@@ -5,13 +5,10 @@ class RentHistoryScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Rent History')),
-      body: Center(
-        child: const Text(
-          'No rent history available.',
-          style: TextStyle(fontSize: 20),
-        ),
+    return Center(
+      child: const Text(
+        'No rent history available.',
+        style: TextStyle(fontSize: 20),
       ),
     );
   }

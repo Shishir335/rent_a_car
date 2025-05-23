@@ -30,7 +30,6 @@ class AuthenticationProvider with ChangeNotifier {
 
   Future<HttpHelperResponse> login() async {
     changeLoader(true);
-    print(EndPoints.login);
     var res = await HttpHelper.get(
       EndPoints.login,
       // body: {"email": email.text, "password": pass.text},
@@ -38,8 +37,6 @@ class AuthenticationProvider with ChangeNotifier {
     );
 
     changeLoader(false);
-
-    print(checkSuccess(res));
 
     if (checkSuccess(res)) {
       try {
